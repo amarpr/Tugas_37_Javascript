@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript DOM - Tugas 37</title>
+</head>
+
+<body>
+    <button onclick="Tombol()" type="button" name="button">Jalankan</button>
+    <br><br><br> Atribut <b>getNamedItem</b> :
+    <p id="p1">Contoh</p>
+    <hr> Atribut <b>name()</b> :
+    <p id="p2">contoh</p>
+    <hr> atribut <b>length(</b> :
+    <p id="p3">contoh</p>
+    <hr>
+
+    <script type="text/javascript">
+        function Tombol() {
+            var a = document.getElementsByTagName('button')[0];
+            var b = a.attributes.getNamedItem("onclick").value;
+            var c = a.attributes[1].name;
+            var d = a.attributes.length;
+            document.getElementById("p1").innerHTML = b;
+            document.getElementById("p2").innerHTML = c;
+            document.getElementById("p3").innerHTML = d;
+        }
+    </script>
+</body>
+
+</html>
